@@ -1,8 +1,37 @@
 {
   "wiki_name": "HorizenWiki",
-  "author": "HorizenWiki",
+  "author": "ht-team4",
+  "last_updated": "2026-02-21",
   "entries": [
-    { "id": "001", "name": "Mainnet", "status": "Online" },
-    { "id": "002", "name": "SecureNode", "status": "Active" }
+    {
+      "id": "ZEN-001",
+      "name": "Mainnet (EVM L3)",
+      "type": "Network",
+      "status": "Operational",
+      "details": "Horizen has migrated to an EVM-native L3 on Base. It uses the OP Stack for fast, low-cost transactions."
+    },
+    {
+      "id": "SN-042",
+      "name": "Secure Node",
+      "type": "Infrastructure",
+      "stake_required": "42 ZEN",
+      "uptime_target": "92%",
+      "details": "Requires a dedicated IP and 92% uptime. Historically rewarded for securing the network."
+    },
+    {
+      "id": "SUP-500",
+      "name": "Super Node",
+      "type": "Infrastructure",
+      "stake_required": "500 ZEN",
+      "uptime_target": "96%",
+      "details": "Requires 8GB RAM and 4-core CPU. These nodes handle sidechain certificate processing."
+    },
+    {
+      "id": "HCCE-2026",
+      "name": "Confidential Compute",
+      "type": "Feature",
+      "status": "Q1 2026 Launch",
+      "details": "Uses Trusted Execution Environments (TEEs) for private smart contract execution."
+    }
   ]
 }
