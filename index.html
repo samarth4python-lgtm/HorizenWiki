@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HorizenWiki | API Portal</title>
+    <style>
+        body { font-family: sans-serif; background: #121212; color: #00ffa3; padding: 50px; text-align: center; }
+        .box { background: #1e1e1e; padding: 20px; border-radius: 10px; border: 1px solid #333; display: inline-block; }
+        input { padding: 10px; border-radius: 5px; border: none; width: 250px; }
+        button { padding: 10px 20px; background: #00ffa3; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; }
+        #status { margin-top: 20px; color: white; }
+    </style>
+</head>
+<body>
+
+    <h1>🔐 HorizenWiki API Portal</h1>
+    <div class="box">
+        <p>Enter API Key to access Database:</p>
+        <input type="text" id="keyInput" placeholder="Enter Key Here...">
+        <button onclick="checkKey()">Access Data</button>
+        <div id="status"></div>
+    </div>
+
+    <script>
+        // THIS IS YOUR SECRET KEY
+        const SECRET_KEY = "HT-TEAM4-ACCESS";
+
+        function checkKey() {
+            const userKey = document.getElementById('keyInput').value;
+            const status = document.getElementById('status');
+
+            if (userKey === SECRET_KEY) {
+                status.innerHTML = "✅ Access Granted! Fetching data...";
+                // Redirect to your JSON file
+                setTimeout(() => {
+                    window.location.href = "api.json";
+                }, 1500);
+            } else {
+                status.innerHTML = "❌ Invalid Key. Access Denied.";
+                status.style.color = "#ff4d4d";
+            }
+        }
+    </script>
+</body>
+</html>
